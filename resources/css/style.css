@@ -1,0 +1,53 @@
+/** General CSS Styling for Document **/
+a{
+  color: inherit;
+}
+/** Styling for Header/Top Menu Section **/
+header{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4rem; /** Note: Assuming HTML Font Size is standard 16px throughout **/
+  margin: 1rem 1.5rem;
+  padding: 1px;
+  background-color: white;
+  border: 1px solid black;
+}
+header .logo{
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+.name2 span{
+  color: grey;
+}
+header .menu{
+  display: flex;
+}
+header .menu span{
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  color: red;
+}
+
+/** Styling for Jumbotron/Top Banner Section
+.jumbotron{
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid black;
+}
+.jumbotron .image-container{
+  width: 60%;
+  margin: 2rem 1.5rem;
+}
+.jumbotron .content{
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  border-radius: 4px;
+  background-color: firebrick;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+} **/
