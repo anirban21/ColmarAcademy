@@ -42,11 +42,16 @@ h5, h6, p, span{
   justify-content:space-between;
 }
 .textContent{
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   vertical-align: middle;
+}
+.textContent h3{
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .internalBox1{
   display: flex;
@@ -60,10 +65,19 @@ h5, h6, p, span{
   align-items: center;
   background-color: #efeff5;
 }
+.internalBox3{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
 .internalBox1 .image-container, .internalBox2 .image-container{
   width: 35%;
   height: auto;
   margin: 1rem;
+}
+.internalBox3 .image-container{
+  width: 100%;
+  height: auto;
 }
 .internalBox1 .textContent, .internalBox2 .textContent{
   width: 65%;
@@ -71,7 +85,10 @@ h5, h6, p, span{
 .internalBox1 a, .internalBox2 a{
   color: blue;
 }
-.internalBox1 p, .internalBox2 p{
+.internalBox3 .textContent{
+  padding: 1.5rem 1rem;
+}
+.textContent p{
   font-size: 14px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -180,5 +197,30 @@ header .menu span{
 .midbanner .leftContent .image-container{
   max-width: 100%;
   height: auto;
+  margin-bottom: 2rem;
+}
+
+/** Styling for Courses Section **/
+.courseSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #efeff5;
+}
+.courseSection h1{
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.courses{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 4.5rem;
+}
+.courses .internalBox3{
+  width: 30%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   margin-bottom: 2rem;
 }
