@@ -1,11 +1,4 @@
-/** General CSS Styling for Document **/
-a{
-  color: inherit;
-  text-decoration: none;
-}
-body{
-  line-height: 1.4;
-}
+/** General CSS Styling for Document including all Re-factoring **/
 @font-face {
   font-family: 'Quattrocento';
   font-style: normal;
@@ -20,6 +13,28 @@ body{
   src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v15/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
+body{
+  line-height: 1.4;
+}
+
+/** Hover styling and transitions for Links and Buttons **/
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  font-weight: 800;
+  color: firebrick;
+}
+.button:hover{
+  background-color: firebrick;
+  text-decoration: underline;
+}
+a, .button{
+  transition: all 0.3s linear 200ms;
+}
+
+/** Font Settings and sizing **/
 h1, h2, h3{
   font-family: Oswald;
   font-weight: bold;
@@ -27,20 +42,23 @@ h1, h2, h3{
 h5, h6, p, span{
   font-family: Quattrocento;
 }
+
+/** Styling for all the major re-factored content used throughout the website **/
 .leftContent{
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-right: 1.5rem;
+  margin: 2rem 1.5rem;
 }
 .rightContent{
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content:space-between;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 .textContent{
   max-width: 100%;
@@ -54,6 +72,13 @@ h5, h6, p, span{
   font-size: 1.5rem;
   font-weight: bold;
 }
+.textContent p{
+  font-size: 14px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/** CSS Styling for 3 types of internal boxes used across spec **/
 .internalBox1{
   display: flex;
   justify-content: flex-start;
@@ -68,19 +93,10 @@ h5, h6, p, span{
   background-color: #efeff5;
   padding-right: 1rem; /** To prevent text too close to edge of screen **/
 }
-.internalBox3{
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-}
 .internalBox1 .image-container, .internalBox2 .image-container{
   width: 35%;
   height: auto;
   margin: 1rem;
-}
-.internalBox3 .image-container{
-  width: 100%;
-  height: auto;
 }
 .internalBox1 .textContent, .internalBox2 .textContent{
   width: 65%;
@@ -88,18 +104,25 @@ h5, h6, p, span{
 .internalBox1 a, .internalBox2 a{
   color: blue;
 }
-.internalBox3 .textContent{
-  padding: 1.5rem 1rem;
+.internalBox3{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
-.textContent p{
-  font-size: 14px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-.image-container img{
+.internalBox3 .image-container{
   width: 100%;
   height: auto;
 }
+.internalBox3 .textContent{
+  padding: 1.5rem 1rem;
+}
+
+/** Styling for image and video containers **/
+.image-container img, .video-container video{
+  width: 100%;
+  height: auto;
+}
+
 /** Styling for Header/Top Menu Section **/
 header{
   display: flex;
@@ -125,7 +148,7 @@ header .menu{
   display: flex;
 }
 header .menu span{
-  margin-right: 0.5rem;
+  margin-right: 0.5rem; /** Collectively adds up to the 16px spacing between spans **/
   margin-left: 0.5rem;
   font-weight: bold;
 }
@@ -137,18 +160,9 @@ header .menu span{
   align-items: center;
   background-color: #efeff5;
 }
-.jumbotron .leftContent{
-  margin: 2rem 1.5rem;
-}
 .jumbotron .leftContent img{
   width: 100%;
   height: auto;
-}
-.jumbotron .rightContent{
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  line-height: 1.2;
 }
 .jumbotron .rightContent h1{
   font-size: 3.5rem;
@@ -167,13 +181,6 @@ header .menu span{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.button:hover{
-  background-color: firebrick;
-  text-decoration: underline;
-}
-.button{
-  transition: all 0.3s linear 200ms;
-}
 
 /** Styling for Mid Banner Section **/
 .midbanner{
@@ -181,8 +188,11 @@ header .menu span{
   align-items: flex-start;
   margin-bottom: 2rem;
   background-color: white;
-  margin-top: 2rem;
-  margin-left: 1.5rem;
+}
+.midbanner .leftContent .image-container{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
 }
 .midbanner .leftContent h1{
   font-size: 3rem;
@@ -195,11 +205,7 @@ header .menu span{
 .midbanner .leftContent p{
   font-weight: bold;
 }
-.midbanner .leftContent .image-container{
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
-}
+
 
 /** Styling for Courses Section **/
 .courseSection{
@@ -238,7 +244,6 @@ header .menu span{
 .thesis h1{
   font-size: 2rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 .thesisContent{
   display: flex;
