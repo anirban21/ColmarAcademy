@@ -33,6 +33,7 @@ h5, h6, p, span{
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-right: 1.5rem;
 }
 .rightContent{
   width: 40%;
@@ -58,12 +59,14 @@ h5, h6, p, span{
   justify-content: flex-start;
   align-items: center;
   background-color: white;
+  padding-right: 1rem; /** To prevent text too close to edge of screen **/
 }
 .internalBox2{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: #efeff5;
+  padding-right: 1rem; /** To prevent text too close to edge of screen **/
 }
 .internalBox3{
   display: flex;
@@ -175,6 +178,7 @@ header .menu span{
 /** Styling for Mid Banner Section **/
 .midbanner{
   display: flex;
+  align-items: flex-start;
   margin-bottom: 2rem;
   background-color: white;
   margin-top: 2rem;
@@ -190,9 +194,6 @@ header .menu span{
 }
 .midbanner .leftContent p{
   font-weight: bold;
-}
-.midbanner .leftContent{
-  margin-right: 1.5rem;
 }
 .midbanner .leftContent .image-container{
   max-width: 100%;
@@ -223,6 +224,33 @@ header .menu span{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 2rem;
+}
+
+/** Styling for Thesis Section **/
+.thesis{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: white;
+  margin-left: 1.5rem;
+}
+.thesis h1{
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.thesisContent{
+  display: flex;
+  align-items: flex-start;
+}
+.video-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+.video-container video{
+  max-width: 100%;
 }
 
 /** Styling for Footer Section **/
