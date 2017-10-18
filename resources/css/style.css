@@ -318,6 +318,30 @@ header .menu span{
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width:850px){
+  .courseSection{
+    background-color: hsla(0, 23%, 95%, 0.5);
+  }
+  .courses{
+    flex-direction: column;
+    align-items: center;
+  }
+  .courses .internalBox3{
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .courses .image-container{
+    display: none;
+  }
+  .courses .textContent{
+    width: 100%;
+    background-color: #e0e0eb;
+  }
+  .courses .textContent p, .courses .textContent span{
+    display: none;
+  }
+}
+
 /** Styling for Thesis Section **/
 .thesis{
   display: flex;
@@ -343,6 +367,21 @@ header .menu span{
 .video-container video{
   max-width: 100%;
 }
+@media only screen and (max-width:850px){
+  .thesis{
+    margin-bottom: 0;
+  }
+  .thesisContent .rightContent{
+    display: none;
+  }
+  .thesisContent .leftContent{
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .thesisContent .leftContent .textContent{
+    display: none;
+  }
+}
 
 /** Styling for Footer Section **/
 footer{
@@ -354,4 +393,9 @@ footer{
 footer span{
   font-size: 0.8rem;
   margin: 0.5rem;
+}
+@media only screen and (max-width:850px){
+  footer .terms{
+    display: none;
+  }
 }
