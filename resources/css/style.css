@@ -162,7 +162,7 @@ header .menu span{
   font-weight: bold;
 }
 /** Mobile optimization for header section **/
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 500px) {
   .menu span{
     display: none;
   }
@@ -210,7 +210,7 @@ header .menu span{
 }
 
 /** Mobile Optimization for jumbotron banner section **/
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:500px) {
   .jumbotron{
     flex-direction: column;
   }
@@ -255,7 +255,7 @@ header .menu span{
 .midbanner .leftContent p{
   font-weight: bold;
 }
-@media only screen and (max-width:850px){
+@media only screen and (max-width:500px){
   .midbanner .leftContent{
     display: none;
   }
@@ -318,7 +318,7 @@ header .menu span{
   margin-bottom: 2rem;
 }
 
-@media only screen and (max-width:850px){
+@media only screen and (max-width:500px){
   .courseSection{
     background-color: hsla(0, 23%, 95%, 0.5);
   }
@@ -367,19 +367,24 @@ header .menu span{
 .video-container video{
   max-width: 100%;
 }
-@media only screen and (max-width:850px){
+@media only screen and (max-width:500px){
   .thesis{
-    margin-bottom: 0;
+    margin: 0;
   }
   .thesisContent .rightContent{
     display: none;
   }
   .thesisContent .leftContent{
     width: 100%;
-    margin-bottom: 2rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
   }
   .thesisContent .leftContent .textContent{
     display: none;
+  }
+  .thesisContent .video-container{
+    width: 100%;
   }
 }
 
@@ -394,7 +399,7 @@ footer span{
   font-size: 0.8rem;
   margin: 0.5rem;
 }
-@media only screen and (max-width:850px){
+@media only screen and (max-width:500px){
   footer .terms{
     display: none;
   }
