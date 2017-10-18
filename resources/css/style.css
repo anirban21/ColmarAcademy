@@ -262,12 +262,16 @@ header .menu span{
   .midbanner .rightContent{
     width: 100%;
     margin: 0;
+    align-items: center;
   }
   .midbanner .internalBox1, .midbanner .internalBox2{
     flex-direction: column;
+    padding-right: 0; /**Removing styling from earlier box so image-container expands **/
     align-items: flex-start;
-    width: 100%;
+    max-width: 100%;
     background-color: white;
+    margin: 1rem;
+    margin-bottom: 2rem;
   }
   .midbanner .desktopImages{
     display: none;
@@ -277,12 +281,15 @@ header .menu span{
   }
   .midbanner .image-container{
     width: 100%;
+    margin: 0;
   }
   .midbanner .image-container img{
-    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
   .midbanner .textContent{
     margin-left: 1rem;
+    margin-top: 1rem;
   }
 }
 
