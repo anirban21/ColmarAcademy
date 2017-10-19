@@ -5,6 +5,11 @@
     <title>Colmar Academy</title>
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+    <!-- Converted Logo to JPG and then generated Favicon for Linking -->
+    <link rel="icon" href="./faviconColmar.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./faviconColmar.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
   </head>
   <body>
     <!-- Header/Top Menu Section -->
@@ -17,7 +22,7 @@
         <h2 class="name1">COLMAR</h2>
         <h2 class="name2">ACADEMY</h2>
       </div>
-      <nav class="menu">
+      <nav class="menu" role="presentation">
         <span><a href="#">On campus</a></span>
         <span><a href="#">Online</a></span>
         <span><a href="#">For companies</a></span>
@@ -39,7 +44,7 @@
           consectetur adipiscing elit.</br> </p>
           <br></br>
         </div>
-        <p class="button"><a href="#">Start Here</a></p>
+        <p class="button" role="button"><a href="#">Start Here</a></p>
       </div>
     </div>
 
@@ -57,7 +62,7 @@
             nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam
             eget magna laoreet, efficitur dolor consequat, tristique ligula."</h5>
 
-          <p> Emmnauel, Sr Strategist at Hiring.com </p>
+          <p role="note" aria-label="Author"> Emmnauel, Sr Strategist at Hiring.com </p>
         </div>
       </div>
 
@@ -222,9 +227,10 @@
     <!-- Footer -->
     <footer>
       <div class="copyright">
-        <span>&copy; 2016, Colmar Academy. All rights reserved</span>
+        <!-- Used the Copyright Favicon from Font Awesome-->
+        <span><i class="fa fa-copyright fa-33%"></i> 2016, Colmar Academy. All rights reserved</span>
       </div>
-      <div class="terms">
+      <div class="terms" role="presentation">
         <span><a href="#">Terms</a></span>
         <span><a href="#">Privacy</a></span>
       </div>
